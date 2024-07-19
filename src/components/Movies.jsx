@@ -22,5 +22,8 @@ export function NoMoviesResults () {
 }
 
 export function Movies () {
-    
-}
+    return {
+          hasMovies
+            ? renderMovies()
+            : renderNoResults()
+        }

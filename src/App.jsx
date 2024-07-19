@@ -16,14 +16,12 @@ function App( ) {
         </form>
       </header>
       <main>
-        {
-          hasMovies
-            ? renderMovies()
-            : renderNoResults()
-        }
+        
       </main>
     </div>
   )
 }
+
+export 
 
 export default App
