@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export function ListOfMovies ({ movies }) {
   return (
     <ul>
@@ -21,9 +22,7 @@ export function NoMoviesResults () {
   )
 }
 
-export function Movies () {
-    return {
-          hasMovies
-            ? renderMovies()
-            : renderNoResults()
-        }
+export function Movies ({ movies }) {
+  const hasMovies = movies?.length > 0;
+  return hasMovies ? <ListOfMovies movies={movies} /> : <NoMoviesResults />;
+}
